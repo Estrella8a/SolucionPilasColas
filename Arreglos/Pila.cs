@@ -31,9 +31,9 @@ namespace Arreglos
 
         }
 
-        public void Agregar(string dato) 
-        { 
-            if (EstaLLeno() == true) 
+        public void Agregar(string dato)
+        {
+            if (EstaLLeno() == true)
             {
                 throw new Exception("No hay espacio");
             }
@@ -41,5 +41,31 @@ namespace Arreglos
             _tope++;
         }
 
+        private bool EstaVacio()
+        {
+            if (_tope < 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void Eliminar()
+        {
+            if (EstaVacio() == true)
+            {
+                throw new Exception("Ya no hay elementos a eliminar");
+            }
+            _tope--;
+            _arreglo[_tope] = string.Empty;
+        }
+
+        public string[] ObtenerArreglo() 
+        { 
+         return _arreglo; 
+        }
     }
 }

@@ -1,4 +1,13 @@
 ﻿Arreglos.Pila pila = new Arreglos.Pila(5);
+void Imprimir(string[] elementos)
+{
+    //Console.Clear();
+    Console.WriteLine();
+    foreach (string elemento in elementos)
+    {
+        Console.WriteLine(elemento);
+    }
+}
 
 try
 {
@@ -7,7 +16,25 @@ try
     pila.Agregar("Pepe2");
     pila.Agregar("Pepe3");
     pila.Agregar("Pepe4");
-    pila.Agregar("Pepe5");
+
+    Imprimir(pila.ObtenerArreglo());
+
+    pila.Eliminar();
+    Imprimir(pila.ObtenerArreglo());
+    pila.Eliminar();
+    Imprimir(pila.ObtenerArreglo());
+    pila.Eliminar();
+    Imprimir(pila.ObtenerArreglo());
+    pila.Eliminar();
+    Imprimir(pila.ObtenerArreglo());
+    pila.Eliminar();
+    Imprimir(pila.ObtenerArreglo());
+    pila.Eliminar();
+    Imprimir(pila.ObtenerArreglo());
+    pila.Eliminar();
+    Imprimir(pila.ObtenerArreglo());
+
+
 }
 catch (Exception ex)
 {
