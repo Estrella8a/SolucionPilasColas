@@ -6,7 +6,57 @@ using System.Threading.Tasks;
 
 namespace Arreglos
 {
-    internal class Colas
+    public class Colas
     {
+        private string[] _arreglo;
+        private int _tope;
+        private int _max;
+        private int _inicio;
+
+          public Colas(int elementos)
+          {
+           _arreglo = new string[elementos];
+           _tope = 0;
+           _max = _arreglo.Length - 1;
+           _inicio = 0;
+          }
+               private bool EstaVacio()
+               {
+                return ((_inicio < 1 && _tope < 1) || _inicio == _tope);
+               }
+
+               private bool EstaLleno()
+               {
+                return (_tope > _max);
+               }
+
+               public void Agregar(string dato)
+               {
+                     if (EstaLleno())
+                     {
+                      throw new Exception("No hay espacio");
+                     }
+                _arreglo[_tope] = dato;
+                _tope++;
+               }
+
+               public void Eliminar()
+               {
+                    if (EstaVacio())
+                         {
+                         throw new Exception("No hay nada que eliminar");
+                         }
+                _arreglo[_inicio] = null;
+                _inicio++;
+               }
+
+               public string[] ObtenerArreglo()
+               {
+                 return _arreglo;
+               }
+
+
+
+
     }
 }
