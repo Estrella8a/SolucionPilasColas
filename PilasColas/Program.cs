@@ -18,7 +18,6 @@ try
     pila.Agregar("Pepe4");
 
     Imprimir(pila.ObtenerArreglo());
-
     pila.Eliminar();
     Imprimir(pila.ObtenerArreglo());
     pila.Eliminar();
