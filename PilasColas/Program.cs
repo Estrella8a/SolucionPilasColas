@@ -1,4 +1,5 @@
 ﻿using Arreglos;
+using Listas;
 
 namespace PilasColas
 {
@@ -8,6 +9,7 @@ namespace PilasColas
         {
             ArregloPila();
             ArregloColas();
+            ListasPilas();
         }
 
 
@@ -74,11 +76,11 @@ namespace PilasColas
 
                 try
                 {
-                    colas.Agregar("Pepe0");
-                    colas.Agregar("Pepe1");
-                    colas.Agregar("Pepe2");
-                    colas.Agregar("Pepe3");
-                    colas.Agregar("Pepe4");
+                    colas.Agregar("Peep0");
+                    colas.Agregar("Peep1");
+                    colas.Agregar("Peep2");
+                    colas.Agregar("Peep3");
+                    colas.Agregar("Peep4");
 
                     Imprimir(colas.ObtenerArreglo());
                     colas.Eliminar();
@@ -101,15 +103,62 @@ namespace PilasColas
                     Console.WriteLine(ex.Message);
                 }
         }
-       
 
-   
-    
-    
-    
-    
-    
-    
-    
+
+
+        static void ListasPilas()
+        {
+
+            Console.WriteLine("**************Listas Pilas**************");
+            try
+
+            {
+                Listas.Pilas pila = new Listas.Pilas();
+            
+       
+          
+                pila.Agregar("Pp0");
+                pila.Imprimir();
+                pila.Agregar("Pp1");
+                pila.Imprimir();
+                pila.Agregar("Pp2");
+                pila.Imprimir();
+                pila.Agregar("Pp3");
+                pila.Imprimir();
+                pila.Agregar("Pp4");
+                pila.Imprimir();
+                pila.Agregar("Pp5");
+                pila.Imprimir();
+
+
+                Console.WriteLine();
+                pila.Eliminar();
+                Console.WriteLine(pila.Imprimir());
+
+                Console.WriteLine();
+                pila.Eliminar();
+                Console.WriteLine(pila.Imprimir());
+
+                Console.WriteLine();
+                pila.Eliminar();
+                Console.WriteLine(pila.Imprimir());
+
+                Console.WriteLine();
+                pila.Eliminar();
+                Console.WriteLine(pila.Imprimir());
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+
+
+
+
+
     }
 }
