@@ -10,6 +10,7 @@ namespace PilasColas
             ArregloPila();
             ArregloColas();
             ListasPilas();
+            ListasColas();
         }
 
 
