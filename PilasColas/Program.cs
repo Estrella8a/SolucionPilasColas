@@ -155,7 +155,51 @@ namespace PilasColas
             }
         }
 
+        static void ListasColas()
+        {
+            Console.WriteLine("**************Listas Colas**************");
+            try
+            {
 
+                Listas.Colas cola = new Listas.Colas();
+
+                cola.Agregar(" Epep0");
+                cola.Imprimir();
+                cola.Agregar("Epep1");
+                cola.Imprimir(); ;
+                cola.Agregar("Epep2");
+                cola.Imprimir();
+                cola.Agregar("Epep3");
+                cola.Imprimir();
+                cola.Agregar("Epep4");
+                Console.WriteLine(cola.Imprimir());
+
+                Console.WriteLine();
+                cola.Eliminar();
+                Console.WriteLine(cola.Imprimir());
+
+                Console.WriteLine();
+                cola.Eliminar();
+                Console.WriteLine(cola.Imprimir());
+
+                Console.WriteLine();
+                cola.Eliminar();
+                Console.WriteLine(cola.Imprimir());
+
+                Console.WriteLine();
+                cola.Eliminar();
+                Console.WriteLine(cola.Imprimir());
+
+                Console.WriteLine();
+                cola.Eliminar();
+                Console.WriteLine(cola.Imprimir());
+            }
+             catch (Exception ex)
+            {
+             Console.WriteLine(ex.Message);
+            }
+
+        }
 
 
 
